@@ -5,7 +5,7 @@
 // Driver for the Vehicle, Car, and Truck classes.
 #include "Vehicle.h"
 #include "Car.h"
-//#include <"Truck.h">
+#include "Truck.h"
 #include <string>
 #include <iostream>
 using namespace std;
@@ -22,9 +22,9 @@ int main()
 	int carDoors;
 
 	// Truck members
-	/*string truckManufacturer;
+	string truckManufacturer;
 	int truckYear;
-	int truckTowing;*/
+	int truckTowing;
 
 	cout << "Vehicle Program" << endl;
 
@@ -44,10 +44,22 @@ int main()
 	getline(cin, carManufacturer);
 	cout << "Enter the year built: ";
 	cin >> carYear;
-	cout << "Enter number of doors: ";
+	cout << "Enter the number of doors: ";
 	cin >> carDoors;
 	Car car(carManufacturer, carYear, carDoors); // Store user input in Car object
 	car.displayInfo(); // Call displayInfo on Car object
+
+	// Handling Truck object
+	cout << "\nTruck:" << endl;
+	cout << "Enter the manufacturer: ";
+	cin.ignore(); // Ignore newline charcter in keyboard buffer
+	getline(cin, truckManufacturer);
+	cout << "Enter the year built: ";
+	cin >> truckYear;
+	cout << "Enter the towing capacity: ";
+	cin >> truckTowing;
+	Truck truck(truckManufacturer, truckYear, truckTowing);
+	truck.displayInfo();
 
 	return 0;
 }
