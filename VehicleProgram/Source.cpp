@@ -58,8 +58,8 @@ int main()
 	cin >> truckYear;
 	cout << "Enter the towing capacity: ";
 	cin >> truckTowing;
-	Truck truck(truckManufacturer, truckYear, truckTowing);
-	truck.displayInfo();
+	Truck truck(truckManufacturer, truckYear, truckTowing); // Store user input in Truck object
+	truck.displayInfo(); // Call displayInfo on Truck object
 
 	return 0;
 }
