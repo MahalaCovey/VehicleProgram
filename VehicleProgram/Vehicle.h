@@ -2,7 +2,7 @@
 // CIS 1202 800
 // April 4, 2024
 
-// Specification file for the Vehicle class
+// Specification file for the Vehicle class.
 #ifndef VEHICLE_H
 #define VEHICLE_H
 #include <string>
@@ -18,12 +18,12 @@ private:
 public:
 	Vehicle(); // Default constructor
 	Vehicle(string, int); // Constructor
-	void displayInfo();
 	// Setters
 	void setManufacturer(string);
 	void setYear(int);
 	// Getters
-	string getManufacturer();
-	int getYear();
+	string getManufacturer() const;
+	int getYear() const;
+	void displayInfo() const;
 };
 #endif
