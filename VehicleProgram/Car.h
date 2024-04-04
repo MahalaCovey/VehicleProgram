@@ -17,7 +17,7 @@ private:
 
 public:
 	Car(); // Default constructor
-	Car(int); // Constructor
+	Car(string, int, int); // Constructor
 	// Setters
 	void setDoors(int);
 	// Getters
